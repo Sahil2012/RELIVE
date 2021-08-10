@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TrackerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Stats for India"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Confirmed"
+                    android:textColor="#1894d6"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <ImageView
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/cases"
+                    app:tint="#1894d6"
+                    />
+                <TextView
+                    android:id="@+id/cTotal"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#1894d6"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Recovered"
+                    android:textColor="#77d618"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <ImageView
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/heart"
+                    app:tint="#77d618"
+                    />
+                <TextView
+                    android:id="@+id/rTotal"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#77d618"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="Deaths"
+                    android:textColor="#d61b18"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <ImageView
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/death"
+                    app:tint="#d61b18"
+                    />
+                <TextView
+                    android:id="@+id/dTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="#d61b18"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Statewise Stats"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stateRec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</FrameLayout>

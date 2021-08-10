@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/logout"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="#DD2954"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/nameAcct"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#77d618"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="#DD2954"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/emailAct"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#77d618"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Place"
+                    android:textColor="#DD2954"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/cityAcct"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#77d618"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/logOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:layout_marginHorizontal="40dp"
+                android:background="@drawable/bag_card"
+                android:layout_marginVertical="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "966646386756",
+    "project_id": "relive-ccb05",
+    "storage_bucket": "relive-ccb05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966646386756:android:be11a1214056b53f872c11",
+        "android_client_info": {
+          "package_name": "com.example.relive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966646386756-rumq0tge9q69477q1ddq429k8bgsf6r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA_ChRijPY3AUvKf4ljcaRHz2izzwPYCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966646386756-rumq0tge9q69477q1ddq429k8bgsf6r6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
