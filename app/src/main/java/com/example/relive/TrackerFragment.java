@@ -47,7 +47,7 @@ public class TrackerFragment extends Fragment {
     private ArrayList<Map<String,String>> arr;
     private RecyclerView recyclerView;
     private StateAdapter stateAdapter;
-    String apiUrl = "https://api.covid19india.org/data.json";
+    String apiUrl = "https://api.rootnet.in/covid19-in/stats/latest";
     private TextView rTotal,cTotal,dTotal;
     String rT = "0",cT = "0",dT = "0";
 
@@ -83,25 +83,26 @@ public class TrackerFragment extends Fragment {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray stateWise = response.getJSONArray("statewise");
+                    JSONObject jo = response.getJSONObject("data");
+                    JSONArray tot = jo.getJSONArray("unofficial-summary");
+                    JSONArray stateWise = jo.getJSONArray("regional");
 
-                    JSONObject j = stateWise.getJSONObject(0);
-                    cT = j.getString("confirmed");
+                    JSONObject j = tot.getJSONObject(0);
+                    cT = j.getString("active");
                     rT = j.getString("recovered");
                     dT = j.getString("deaths");
                     setTextForTotal();
-                    for(int i = 1; i < stateWise.length(); i++){
+
+                    for(int i = 0; i < stateWise.length(); i++){
 
                         JSONObject jsonObject = stateWise.getJSONObject(i);
 
-                        String stateName = jsonObject.getString("state");
-                        String confirm = jsonObject.getString("confirmed");
-                        String recover = jsonObject.getString("recovered");
+                        String stateName = jsonObject.getString("loc");
+                        String confirm = jsonObject.getString("totalConfirmed");
+                        String recover = jsonObject.getString("discharged");
                         String dead = jsonObject.getString("deaths");
-                        String last = jsonObject.getString("lastupdatedtime");
 
                         Map<String,String> mp = new HashMap<>();
-                        mp.put("lastupdatedtime",last);
                         mp.put("deaths",dead);
                         mp.put("recovered",recover);
                         mp.put("confirmed",confirm);
@@ -112,13 +113,14 @@ public class TrackerFragment extends Fragment {
 
                     stateAdapter.notifyDataSetChanged();
                 } catch (JSONException e){
-
+                    Toast.makeText(getContext(),""+e.toString(),Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Toast.makeText(getContext(),""+error.toString(),Toast.LENGTH_SHORT).show();
+                error.printStackTrace();
             }
         });
 

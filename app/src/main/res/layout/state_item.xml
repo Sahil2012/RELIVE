@@ -56,7 +56,7 @@
                     android:layout_alignParentRight="true"
                     android:padding="10dp"
                     android:textColor="#1894d6"
-                    android:text="Confiremed"
+                    android:text="Confirmed"
                     android:textSize="12sp"
                     android:textStyle="normal" />
 
